@@ -1,5 +1,6 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { colors } from "../../utils/theme/colors";
+const { width } = Dimensions.get('screen')
 
 export const styles = StyleSheet.create({
     container: {
@@ -7,8 +8,10 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 15
     },
     lineSeparator: {
-        height: 5,
-        borderBottomWidth: 0.5,
-        borderBottomColor: colors.black,
+        height: 10,
     },
+    text: {
+        marginLeft: 4
+    }
+
 })

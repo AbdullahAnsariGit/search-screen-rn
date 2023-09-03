@@ -7,7 +7,7 @@ const App = () => {
     return (<LinearGradient style={
             styles.container
         }
-        colors={['#E0FFFF', '#87CEFA']}
+        colors={['#07001B', '#00FFB0']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
     >

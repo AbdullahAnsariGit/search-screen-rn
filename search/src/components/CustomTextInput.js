@@ -1,22 +1,21 @@
 import * as React from 'react';
-import {StyleSheet} from 'react-native'
-import FastImage from 'react-native-fast-image';
+import { StyleSheet } from 'react-native'
 import { Searchbar } from 'react-native-paper';
 import { colors } from '../utils/theme/colors';
+import { family, size } from '../utils/theme/sizes';
+import Shadow from '../helpers/Shadow';
 
-const CustomTextInput = ({onChangeSearch, searchQuery}) => {
-    // const [searchQuery, setSearchQuery] = React.useState('');
-
-    // const onChangeSearch = query => setSearchQuery(query);
+const CustomTextInput = ({ onChangeSearch, searchQuery }) => {
 
     return (
         <Searchbar
-            placeholder='Search'
-            // placeholderTextColor={c?.grey}
+            placeholder='Search based on title or body'
+            placeholderTextColor={colors.neon_green}
             onChangeText={onChangeSearch}
             value={searchQuery}
             style={styles.search}
-            // icon={() => <FastImage source={icon} style={styles.img} resizeMode='contain' />}
+            inputStyle={styles.inputText}
+            iconColor={colors.neon_green}
         />
     );
 };
@@ -24,14 +23,23 @@ const CustomTextInput = ({onChangeSearch, searchQuery}) => {
 export default CustomTextInput;
 
 const styles = StyleSheet.create({
-        search: {
-            flexDirection: 'row-reverse',
-            paddingRight: 20,
-            borderRadius: 15,
-            backgroundColor: colors.white,
-            paddingVertical: 5,
-            marginTop: 10,
-            marginBottom: 10,
-            fontSize: 4,
-          },
+    search: {
+        flexDirection: 'row-reverse',
+        paddingRight: 20,
+        borderRadius: 15,
+        marginHorizontal:4,
+        backgroundColor: colors.black,
+        paddingVertical: 0,
+        marginTop: 10,
+        marginBottom: 10,
+        borderWidth:1,
+        borderColor:colors.neonGreen,
+        ...Shadow.shadow5
+
+    },
+    inputText: {
+        color: colors.white,
+        fontSize: size.xsmall,
+        fontFamily: family.SP_Regular
+    }
 })

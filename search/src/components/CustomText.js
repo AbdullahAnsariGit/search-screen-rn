@@ -9,7 +9,7 @@ const CustomText = ({
     style = {},
     font = family.SP_Regular,
     onPress = undefined,
-    color,
+    colors = '#000000',
     expandable = false,
     intialLength = 100,
     numberOfLines,
@@ -40,8 +40,7 @@ const CustomText = ({
             onPress={onPress ?? undefined}
             style={{
                 fontSize: size,
-                //color: color ?? colors.txt1,
-                color: colors.black,
+                color: colors,
                 fontFamily: font,
                 textDecorationLine: textDecorationLine,
                 ...style,
@@ -54,7 +53,8 @@ const CustomText = ({
                 <Text
                     onPress={toggleExpandable}
                     style={{
-                        color: colors.black,
+                        fontSize: size,
+                        color: colors,
                         textDecorationLine: 'underline',
                         fontFamily: font,
                     }}>

@@ -3,5 +3,7 @@ export const colors = {
     secondary: '#BA006F',
     darkPrimary: '#646825',
     black: '#000000',
-    white:'#ffffff'
+    white: '#ffffff',
+    neon_green: '#00FFB0',
+    neon_accent: '#001313'
 };
